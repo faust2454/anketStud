@@ -1,0 +1,27 @@
+﻿<Window x:Class="anketEmp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:anketEmp"
+        mc:Ignorable="d"
+        Title="Анкетирование сотрудников Алтайского промышленно-экономического колледжа" Height="600" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid x:Name="auth">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="275" Margin="144,149,100,147" Width="550">
+                <Button Content="Пройти тестирование" HorizontalAlignment="Left" Margin="184,231,0,-11" VerticalAlignment="Top" Width="138" Click="Button_Click"/>
+                <TextBox x:Name="userName" HorizontalAlignment="Left" Height="23" Margin="101,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285"/>
+                <TextBlock HorizontalAlignment="Left" Margin="67,9,0,0" TextWrapping="Wrap" Text="ФИО:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="7,34,0,0" TextWrapping="Wrap" Text="Выберите специальность" VerticalAlignment="Top" Width="89" TextAlignment="Right"/>
+                <ScrollViewer HorizontalAlignment="Left" Height="149" Margin="101,34,-145,0" VerticalAlignment="Top" Width="440">
+                    <StackPanel x:Name="spec" Height="0" Width="420" Loaded="spec_Loaded"/>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+        <Grid x:Name="anket" Visibility="Collapsed">
+            <TextBlock x:Name="info" HorizontalAlignment="Right" Margin="0,10,21,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Right" FontSize="16"/>
+            <ScrollViewer x:Name="Scroll" HorizontalAlignment="Left" Height="503" Margin="10,34,0,0" VerticalAlignment="Top" Width="772"/>
+            <Button Content="Отправить" HorizontalAlignment="Center" Margin="0,541,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1"/>
+        </Grid>
+    </Grid>
+</Window>
